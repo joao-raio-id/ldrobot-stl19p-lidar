@@ -1,0 +1,4 @@
+[submodule "ldlidar_sdk"]
+	path = ldlidar_sdk
+url=git@github.com:joao-raio-id/ldlidar_sdk.git
+branch = master

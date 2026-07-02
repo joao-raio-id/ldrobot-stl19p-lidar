@@ -21,7 +21,7 @@ def generate_launch_description():
 
     # Lifecycle manager configuration file
     lc_mgr_config_path = os.path.join(
-        get_package_share_directory('ldlidar_ros2'),
+        get_package_share_directory('ldlidar'),
         'config',
         'lifecycle_mgr.yaml'
     )
@@ -48,7 +48,7 @@ def generate_launch_description():
     # Include LDLidar launch
     ldlidar_launch = IncludeLaunchDescription(
         launch_description_source=PythonLaunchDescriptionSource([
-            get_package_share_directory('ldlidar_ros2'),
+            get_package_share_directory('ldlidar'),
             '/launch/ldlidar.launch.py'
         ]),
         launch_arguments={

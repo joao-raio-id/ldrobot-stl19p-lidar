@@ -20,7 +20,7 @@ def generate_launch_description():
 
     # Lidar node configuration file
     lidar_config_path = os.path.join(
-        get_package_share_directory('ldlidar_ros2'),
+        get_package_share_directory('ldlidar'),
         'config',
         'ldlidar.yaml'
     )
@@ -34,8 +34,8 @@ def generate_launch_description():
 
     # LDLidar lifecycle node
     ldlidar_node = LifecycleNode(        
-        package = 'ldlidar_ros2',
-        executable = 'ldlidar_ros2_lifecycle_node',
+        package = 'ldlidar',
+        executable = 'ldlidar_lifecycle_node',
         name = node_name,
         namespace='',
         output='screen',
@@ -48,7 +48,7 @@ def generate_launch_description():
     # URDF path
     urdf_file_name = 'ldlidar_descr.urdf.xml'
     urdf = os.path.join(
-        get_package_share_directory('ldlidar_ros2'),
+        get_package_share_directory('ldlidar'),
         'urdf',
         urdf_file_name)
     with open(urdf, 'r') as infp:
